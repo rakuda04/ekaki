@@ -1,21 +1,31 @@
+html, body {
+  min-height: 100%;
+}
+
 header{
 display: flex;
 align-items: center;
 justify-content: center;
 }
 
-.main{
+main{
 display: flex;
 justify-items: center;
+flex-direction: row;
 }
 
 #controls{
 display: flex;
 flex-direction: column;
+margin-left: 150px;
+margin-top: 250px;
+gap: 30px;
+
 }
 
-#girdSize ,#rainbow,#reset{
-
+#girdSize ,#rainbow, #reset{
+  width: 70px;
+  height: 30px;
 }
 
 #gridSize{
@@ -23,7 +33,8 @@ flex-direction: column;
 }
 
 #rainbow{
-    <!-- HTML !-->
+}
+
     <button class="button-85" role="button">Button 85</button>
     
     /* CSS */
