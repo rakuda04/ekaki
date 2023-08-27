@@ -35,7 +35,7 @@ gap: 30px;
 #rainbow{
 }
 
-    <button class="button-85" role="button">Button 85</button>
+    /* <button class="button-85" role="button">Button 85</button> */
     
     /* CSS */
     .button-85 {
@@ -111,7 +111,7 @@ gap: 30px;
 }
 
 #ekakiContainer{
-    
+    display: flex;
 }
 
 #ekakiBoard{
