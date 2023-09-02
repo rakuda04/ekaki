@@ -1,3 +1,14 @@
-let gridSize = document.getElementById("gridSize");
+var gridSize = document.getElementById("gridSize").addEventListener("change", adjustGridSize);
 
- gridSize = gridSize * gridSize;
+let newValue;
+
+function adjustGridSize(){
+    document.getElementById('gridSize').value = newValue;
+}
+
+function clearGrid(){
+let mop = document.getElementById("ekakiBoard")
+let children = querySelectorAll("#ekakiBoard");
+for (let i = 0; i < children.removeChild; i++) {
+}
+}
