@@ -116,6 +116,9 @@ gap: 30px;
 
 #ekakiBoard{
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    display: grid;
+    width: 500px;
+    height: 500px;
 }
 
 .footer{
