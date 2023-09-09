@@ -17,9 +17,44 @@ ekakiBoard.style.gridTemplateRows = `repeat(${size} , 1fr)`;
 for (let i = 0; i <size * size; i++) {
 let square = document.createElement("div");
 square.style.backgroundColor = "magenta";
+square.classList.add("square");
+square.addEventListener("mousedown", handleMouseDown);
+square.addEventListener("mousemove", handleMouseMove);
+square.addEventListener("mouseup", handleMouseUp);
+square.addEventListener("mouseleave", handleMouseLeave);
 ekakiBoard.insertAdjacentElement("beforeend", square); 
 }
 }
 
-// create a hover effect so when it is over a square a different color is showing and if the evenlister mousclick is clicked it changes the color
+// connect resetBoard to reset button
+function resetBoard() {
+    let board = document.querySelector("#ekakiBoard");
+    let squares = board.querySelectorAll("div");
+    squares.forEach((div) => (div.style.backgroundColor = "magenta"));
+}
+
+let isDragging = false;
+
+function handleMouseDown(){
+    isDragging = true;
+        this.classList.add("active");
+}
+
+function handleMouseMove(){
+    if (isDragging === true){
+    this.classList.add("active");
+    }
+}
+
+function handleMouseUp(){
+    isDragging = false;
+}
+
+function handleMouseLeave(){
+   
+}
+
+// add changecolor fuction
+
+// add multiple colors to the board
 

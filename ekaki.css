@@ -125,7 +125,13 @@ gap: 30px;
 
 }
 
-.square:hover{
+
+
+
+.square{ 
+}
+
+.square:hover, .active{
   background: linear-gradient(
         45deg,
         #ff0000,
@@ -138,8 +144,20 @@ gap: 30px;
         #ff00c8,
         #ff0000
       );
-      animation: glowing-button-85 20s linear infinite;
+      animation: glowing-square 20s linear infinite;
       transition: opacity 0.3s ease-in-out;
       border-radius: 10px;
+}
+
+@keyframes glowing-square {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
