@@ -125,10 +125,18 @@ gap: 30px;
 
 }
 
+/* for the container*/
+#colorDisplay {
+  display: grid;
+}
 
+.colorSquare {
+  /* Any styles for individual squares */
+}
 
 
 .square{ 
+
 }
 
 .square:hover, .active{
