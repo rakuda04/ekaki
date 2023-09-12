@@ -135,11 +135,11 @@ gap: 30px;
 }
 
 
-.square{ 
+.currentColor{ 
 
 }
 
-.square:hover, .active{
+.currentColor:hover, .active{
   background: linear-gradient(
         45deg,
         #ff0000,
