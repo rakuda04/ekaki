@@ -1,12 +1,62 @@
 html, body {
-  min-height: 100%;
+  margin: 0;
 }
 
-header{
-display: flex;
-align-items: center;
-justify-content: center;
+header {
+  height: 100vh;
+  background: url(./images/ゆるキャン絶景.jpg) center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+
+h2 {
+  position: relative;
+  padding: 15px;
+  border-radius: 5px;
+  border: 2px solid #333;
+  color: #333;
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center;
+}
+
+
+h2:before {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 20px;
+  background-color: #fff;
+  content: "";
+}
+
+h2:after {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 20px;
+  width: 2px;
+  background-color: #333;
+  content: "";
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 80%;
+  height: 80%;
+  border-radius: 20px;
+  padding: 20px
+}
+
 
 main{
 display: flex;
@@ -38,7 +88,7 @@ gap: 30px;
     /* <button class="button-85" role="button">Button 85</button> */
     
     /* CSS */
-    .button-85 {
+    .rainbow {
       padding: 0.6em 2em;
       border: none;
       outline: none;
@@ -53,7 +103,7 @@ gap: 30px;
       touch-action: manipulation;
     }
     
-    .button-85:before {
+    .rainbow:before {
       content: "";
       background: linear-gradient(
         45deg,
@@ -76,12 +126,12 @@ gap: 30px;
       -webkit-filter: blur(5px);
       width: calc(100% + 4px);
       height: calc(100% + 4px);
-      animation: glowing-button-85 20s linear infinite;
+      animation: glowing-rainbow 20s linear infinite;
       transition: opacity 0.3s ease-in-out;
       border-radius: 10px;
     }
     
-    @keyframes glowing-button-85 {
+    @keyframes glowing-rainbow {
       0% {
         background-position: 0 0;
       }
@@ -93,7 +143,7 @@ gap: 30px;
       }
     }
     
-    .button-85:after {
+    .rainbow:after {
       z-index: -1;
       content: "";
       position: absolute;
@@ -106,9 +156,33 @@ gap: 30px;
     }
 
 
-#reset{
+   
+    
 
+
+
+#reset {
+  --x-gradient: linear-gradient(90deg, #323232 0 10px, transparent 0 calc(100% - 10px), #323232 calc(100% - 10px));
+  --y-gradient: linear-gradient(#323232 0 10px, transparent 0 calc(100% - 10px), #323232 calc(100% - 10px));
+  margin: 0.5rem;
+  padding: 1rem 2rem;
+  background-image:
+      var(--x-gradient),
+      var(--y-gradient),
+      var(--x-gradient),
+      var(--y-gradient);
+  background-repeat: no-repeat;
+  background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%;
+  background-position: top, right, bottom, left;
+  color: #323232;
+  text-decoration: none;
+  transition: 0.5s;
 }
+
+#reset:hover {
+  background-position: bottom, left, top, right;
+}
+
 
 #ekakiContainer{
     display: flex;
@@ -131,7 +205,9 @@ gap: 30px;
 }
 
 .colorSquare {
-  /* Any styles for individual squares */
+  
+    width: 50px;
+    height: 50px;
 }
 
 

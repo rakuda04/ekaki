@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>絵描き</title>
     <!-- Link your CSS file here -->
     <link rel="stylesheet" href="ekaki.css" />
     <script src="ekaki.js" defer></script>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <h1>絵描き</h1>
-    </header>
-    <main>
-      <div id="controls">
-        <div id="colorDisplay"></div>
-        <select id="selectColorPalette">
-          <option value="none">select a flower</option>
-          <option value="hot flowers">Hot Flowers</option>
-          <option value="cold flowers">Cold Flowers</option>
-          <option value="funky flowers">funky flowers</option>
-          <option value="grassy flowers">grassy flowers</option>
-          <option value="kyukyurarin flowers">kyukyurarin flowers</option>
-        </select>
+        <div class="glass">
+            <h2>絵描きボード</h2>
+            
+            <main>
+                <div id="controls">
+                    <div id="colorDisplay"></div>
+                    <select id="selectColorPalette">
+                        <option value="none">select a flower</option>
+                        <option value="hot flowers">Hot Flowers</option>
+                        <option value="cold flowers">Cold Flowers</option>
+                        <option value="funky flowers">funky flowers</option>
+                        <option value="grassy flowers">grassy flowers</option>
+                        <option value="kyukyurarin flowers">kyukyurarin flowers</option>
+                    </select>
 
-        <input type="range" id="gridSize" value="16" min="2" max="25" />
-        <input type="button" class="rainbow" value="rainbow!"/>
-        <button class="button-85" role="button">Button 85</button>
-        <input  type="button" id="reset" value="reset"/>
-        <!-- You can put controls like shake or change color here -->
-      </div>
-      <div id="ekakiContainer">
-        <div id="ekakiBoard">
-          <!-- The Etch-A-Sketch board will be created here with JavaScript -->
+                    <input type="range" id="gridSize" value="16" min="2" max="25" />
+                    <input type="button" class="rainbow" value="rainbow!" />
+                   <button class="button-85, rainbow">FF失礼します</button>
+                    <button id="reset">reset2</button>
+                    <!-- <input type="button" id="reset" value="reset" /> -->
+                
+                    <!-- You can put controls like shake or change color here -->
+                </div>
+                <a href="#" class="card"></a>
+                <div id="ekakiContainer">
+                    <div id="ekakiBoard">
+                        <!-- The Etch-A-Sketch board will be created here with JavaScript -->
+                    </div>
+                </div>
+            </a>
+            </main>
         </div>
-      </div>
-    </main>
-    <!-- Link your JavaScript file here -->
-  </body>
+    </header>
+</body>
+
 </html>

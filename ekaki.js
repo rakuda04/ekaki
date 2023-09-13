@@ -30,27 +30,27 @@ function resetBoard() {
     let board = document.querySelector("#ekakiBoard");
     let squares = board.querySelectorAll("div");
     squares.forEach((div) => {
-        div.style.backgroundColor = "magenta";
+        div.style.backgroundColor = "white";
         div.classList.remove("active");
     });
+    
 }
 let resetButton = document.querySelector("#reset");
 resetButton.addEventListener("click", resetBoard)
 
 let isDragging = false;
 
-function handleMouseDown(){
-    if(!isDragging) {  // Fixed the comparison
-        isDragging = true;
-        this.style.backgroundColor = currentColor;  // Fixed the property access
-    }   
- }
- 
- function handleMouseMove(){
-     if (isDragging) {
-         this.style.backgroundColor = currentColor;  // Fixed the property access
-     }
- }
+function handleMouseDown() {
+    isDragging = true;
+    this.style.backgroundColor = currentColor;
+}
+
+function handleMouseMove() {
+    if (isDragging) {
+        this.style.backgroundColor = currentColor;
+    }
+}
+
 
 function handleMouseUp(){
     isDragging = false;
@@ -62,13 +62,24 @@ let colorpalette = document.getElementById("selectColorPalette");
 colorpalette.addEventListener("change", handleColorPalette);
 
 
-function handleColorPalette(){
+function handleColorPalette() {
     let colorDisplay = document.getElementById("colorDisplay");
     colorDisplay.innerHTML = '';
+    
     let selectedPaletteName = colorpalette.value;
     let selectedColors = palettes[selectedPaletteName];
+    
+    if (!selectedColors) {
+        console.error("Palette not found:", selectedPaletteName);
+        return;
+    }
+
+    console.log("Selected Palette:", selectedPaletteName);  // Debugging line
+    console.log("Colors in Palette:", selectedColors); 
+    
     colorDisplay.style.gridTemplateColumns = "1fr 1fr";
     colorDisplay.style.gridTemplateRows = "1fr 1fr";
+    
     for (let i = 0; i < selectedColors.length; i++) {
         let square = document.createElement("div");
         square.style.backgroundColor = selectedColors[i];
@@ -86,12 +97,19 @@ const palettes = {
     "grassy flowers": ["#3e4444", "#82b74b", "#405d27", "#c1946a"],
     "kyukyurarin flowers": ["#d6cbd3", "#eca1a6","#bdcebe" ,"#ada397"],
 }
-// add changecolor fuction
 
 function changecolor(e) {
     let clickedSquare = e.target;
     let selectedColor = clickedSquare.style.backgroundColor;
     currentColor = selectedColor;
 }
-// add multiple colors to the board
 
+
+handleColorPalette();
+
+function randomColors() {
+    this.style.backgroundColor = `hsl(${Math.random()* 360}, 100%, 50%)`
+    // addd eventlistener
+}
+//TODO: Add rainbow button 
+//TODO: Add display for range slider
