@@ -67,10 +67,10 @@ flex-direction: row;
 #controls{
 display: flex;
 flex-direction: column;
-margin-left: 150px;
-margin-top: 250px;
-gap: 30px;
-
+margin-left: 300px;
+gap: 50px;
+justify-content: center;
+align-items: center;
 }
 
 #girdSize ,#rainbow, #reset{
@@ -154,47 +154,112 @@ gap: 30px;
       top: 0;
       border-radius: 10px;
     }
-
-
-   
     
+   
+    .btn-4,
+.btn-4 *,
+.btn-4 :after,
+.btn-4 :before,
+.btn-4:after,
+.btn-4:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-4 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+}
+.btn-4:disabled {
+  cursor: default;
+}
+.btn-4:-moz-focusring {
+  outline: auto;
+}
+.btn-4 svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn-4 [hidden] {
+  display: none;
+}
+.btn-4 {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+.btn-4 span {
+  mix-blend-mode: difference;
+}
+.btn-4:before {
+  --tilt: 1.2rem;
+  background: #fff;
+  -webkit-clip-path: polygon(
+    0 0,
+    calc(100% - var(--tilt)) 0,
+    100% 100%,
+    0 100%
+  );
+  clip-path: polygon(0 0, calc(100% - var(--tilt)) 0, 100% 100%, 0 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: calc(-100% - var(--tilt));
+  position: absolute;
+  top: 0;
+  transform: translateX(var(--progress, 0));
+  transition: transform 0.2s ease;
+  width: calc(100% + var(--tilt));
+}
+.btn-4:hover:before {
+  --progress: 100%;
+}
+
 
 
 
 #reset {
-  --x-gradient: linear-gradient(90deg, #323232 0 10px, transparent 0 calc(100% - 10px), #323232 calc(100% - 10px));
-  --y-gradient: linear-gradient(#323232 0 10px, transparent 0 calc(100% - 10px), #323232 calc(100% - 10px));
-  margin: 0.5rem;
-  padding: 1rem 2rem;
-  background-image:
-      var(--x-gradient),
-      var(--y-gradient),
-      var(--x-gradient),
-      var(--y-gradient);
-  background-repeat: no-repeat;
-  background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%;
-  background-position: top, right, bottom, left;
-  color: #323232;
-  text-decoration: none;
-  transition: 0.5s;
+  border: 0 solid;
+  box-sizing: border-box;
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
 }
 
-#reset:hover {
-  background-position: bottom, left, top, right;
-}
 
 
 #ekakiContainer{
     display: flex;
+    margin-left: auto;
+    margin-top: 50px;
+    margin-right: 200px;
 }
 
 #ekakiBoard{
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
     display: grid;
-    width: 500px;
-    height: 500px;
+    width: 800px;
+    height: 800px;
+    
 }
-
+終
 .footer{
 
 }

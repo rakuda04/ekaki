@@ -1,5 +1,5 @@
 let slider = document.getElementById('gridSize');
-let currentColor = "grey";
+let currentColor = "black";
 
 slider.addEventListener('input', () => {
     let sizeValue = parseInt(slider.value, 10); 
@@ -35,7 +35,7 @@ function resetBoard() {
     });
     
 }
-let resetButton = document.querySelector("#reset");
+let resetButton = document.querySelector(".btn-4");
 resetButton.addEventListener("click", resetBoard)
 
 let isDragging = false;
@@ -111,5 +111,6 @@ function randomColors() {
     this.style.backgroundColor = `hsl(${Math.random()* 360}, 100%, 50%)`
     // addd eventlistener
 }
+//TODO: change white tiles to be transparent
 //TODO: Add rainbow button 
 //TODO: Add display for range slider
